@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Reporter">
+	<groups>
+		<run>
+			<include name="sanity"></include>
+			<include name="smoke"></include>
+			<!--<exclude name="smoke"></exclude>-->
+		</run>
+	</groups>
+	<listeners>
+		<listener class-name="seleniumpractices.ListnerImpl"></listener>
+	</listeners>
+	<test thread-count="2" name="Test" parallel="false" verbose="3">
+		<packages>
+			<!-- <package name="seleniumpractices.*"></package>-->
+			<package name="testcases.*"></package>
+			<package name="pages.*"></package>
+			<package name="utility.*"></package>
+		</packages>
+	</test> 
+</suite> <!--
+Suite -->
